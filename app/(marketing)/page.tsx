@@ -65,7 +65,7 @@ export default function IndexPage() {
                   <div className="elementor-button-wrapper">
                     <Link
                       className="elementor-button elementor-button-link elementor-size-sm"
-                      href="/login"
+                      href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
                     >
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">
@@ -1472,7 +1472,7 @@ export default function IndexPage() {
                     and emails to train your model
                   </p>
                   <Link
-                    href="/login"
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Scan your website
@@ -1496,7 +1496,7 @@ export default function IndexPage() {
                     personality with custom instructions
                   </p>
                   <Link
-                    href="/login"
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Build your chatbot
@@ -1520,7 +1520,7 @@ export default function IndexPage() {
                     chat widget or an iframe section
                   </p>
                   <Link
-                    href="/login"
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Embed Chatbot{" "}

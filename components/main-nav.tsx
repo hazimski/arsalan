@@ -79,7 +79,7 @@ export const HomePageMainNav: React.FC<MainNavProps> = ({isDashboard=false}) => 
           </ul>
           <div className="v--only-mobile u-p-lg u-mt-auto u-mb-0">
             <p className="u-text-center u-text-white">
-              <Link onClick={onToggleMenu} href="/login">
+              <Link onClick={onToggleMenu} href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}>
                 Already a customer?{" "}
                 <span className="u-text-primary">Log in</span>
               </Link>
@@ -88,7 +88,7 @@ export const HomePageMainNav: React.FC<MainNavProps> = ({isDashboard=false}) => 
         </nav>
         <div className="c-navbar__actions">
           <Link
-            href="/login"
+            href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
             className="c-btn v--transparent u-text-white hover:u-bg-white hover:u-text-black v--sm"
           >
             Login
