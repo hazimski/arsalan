@@ -17,7 +17,7 @@ const nextConfig = {
                 has: [
                     {
                         type: 'host',
-                        value: 'chatpad.co',
+                        value: 'www.chatpad.co',
                     },
                 ],
                 destination: 'https://app.chatpad.co/:path*',
