@@ -9,7 +9,7 @@ const nextConfig = {
   swcMinify: true,
   rewrites() {
     return {
-      beforeFiles: [
+      fallback: [
             {
                 source: '/:path((?!^$).*)',
                 has: [
