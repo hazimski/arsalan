@@ -11,17 +11,12 @@ const nextConfig = {
     return {
       beforeFiles: [
             {
-                source: '/:path*',
+                source: '/:path((?!^$).*)',
                 has: [
                     {
                         type: 'host',
                         value: 'www.chatpad.co',
-                    },
-                    {
-                      type: 'query',
-                      key: 'path',
-                      value: '^.+$', // Matches only if path is not empty
-                    },
+                    }
                 ],
                 destination: 'https://app.chatpad.co/:path*',
             },
