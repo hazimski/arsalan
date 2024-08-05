@@ -10,7 +10,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path((?!^$).*)', // Match any path that is not empty
+        source: '/:path*', // Match any path
         has: [
           {
             type: 'host',
@@ -18,7 +18,14 @@ const nextConfig = {
           },
         ],
         destination: 'https://app.chatpad.co/:path*', // Redirect to app.chatpad.co
-        permanent: true, // Set to true if it's a permanent redirect
+        permanent: true, // Permanent redirect
+        // Condition to exclude root path
+        missing: [
+          {
+            type: 'query',
+            key: '',
+          },
+        ],
       },
     ];
   },
