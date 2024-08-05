@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { AOSInit } from "@/components/aos-init";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { constructMetadata } from '@/lib/construct-metadeta';
+import Chatbot from "@/components/chatbot";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default async function RootLayout({
             {process.env.VERCEL_ENV === "production" ? <Analytics /> : <></>}
           </TooltipProvider>
         </ThemeProvider>
+        <Chatbot />
       </body>
       <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || ''} />
     </html>
