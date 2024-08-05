@@ -1,6 +1,6 @@
 import * as React from "react"
 import { VariantProps, cva } from "class-variance-authority"
-
+import { Button as UIBUtton, Link } from '@nextui-org/react'
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
@@ -52,3 +52,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+
+
+// Define the prop type for PrimaryButton
+interface PrimaryButtonProps {
+  text: string;
+  url:string;
+  className?: string
+}
+
+export const PrimaryButton: React.FC<PrimaryButtonProps> = ({ text, url, className }) => {
+  return (
+    <UIBUtton as={Link} className={cn("w-[60vw] lg:w-[11vw] bg-gradient-to-r from-[#4b2e83] to-[#9d71f7] text-[12px]", className)} href={url} variant="flat">
+      {text}
+    </UIBUtton>
+  )
+}

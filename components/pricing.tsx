@@ -115,6 +115,7 @@ export const Pricing: React.FC<PricingType> = ({
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
               <Link
+                passHref
                 className="elementor-button elementor-button-link elementor-size-md"
                 href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
               >

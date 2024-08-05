@@ -7,10 +7,18 @@ import {
   proPlan,
 } from "@/config/subscriptions";
 import { Pricing } from "@/components/pricing";
+import Styles from "./styles/hero.module.css";
+import { Button, PrimaryButton } from "@/components/ui/button";
+import { BentoGridFinal } from "@/components/BentoGridFinal";
+import { SpeedTabs } from "@/components/speed-section";
+
 export default function IndexPage() {
   return (
     <>
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-c20fcbe elementor-section-full_width elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
+      <section
+        style={{ background: "#090b16" }}
+        className="elementor-section elementor-top-section elementor-element elementor-element-c20fcbe elementor-section-full_width elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container"
+      >
         <div className="elementor-background-video-container elementor-hidden-phone">
           <video
             className="elementor-background-video-hosted elementor-html5-video"
@@ -26,26 +34,49 @@ export default function IndexPage() {
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b36f3a">
             <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-1860b62 elementor-widget elementor-widget-html">
+              <div className="flex flex-col items-center justify-center w-full gap-0 bg-[#0000]">
+                <h1
+                  style={{
+                    WebkitTextFillColor: "transparent",
+                    backgroundImage:
+                      "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55))",
+                    backgroundClip: "text",
+                  }}
+                  className="bg-clip-text leading-none  mb-20 text-[40px] lg:text-[7rem] font-[600] text-center my-0 w-[60vw]"
+                >
+                  Custom ChatGPT for your website
+                </h1>
+                <div className="flex justify-center items-center flex-col gap-2">
+                  <p className="w-[80vw] text-center lg:w-[50vw] text-[grey] container---small text---white center ">
+                    Provide AI-based, human-like, 24/7 customer support with a
+                    custom ChatGPT chatbot on your website, trained on your
+                    content, capable of handling customer support, lead
+                    generation, and engaging with your users.{" "}
+                  </p>
+                  <PrimaryButton className="!flex items-center lg:w-[11vw]" url={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL + "/login"} text="Get Started For Free" />
+                </div>
+              </div>
+              {/* <div className="elementor-element elementor-element-1860b62 elementor-widget elementor-widget-html">
                 <div className="elementor-widget-container">
                   <h1
-                    className="headline massive text---white xxl-tab balanced line-height-100 home-hero-text"
-                    style={{
-                      WebkitTextFillColor: "transparent",
-                      backgroundImage:
-                        "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55))",
-                      backgroundClip: "text",
-                      paddingBottom: "0.05em",
-                      fontSize: "7rem",
-                      lineHeight: "100%",
-                      textAlign: "center",
-                    }}
+                  className="bg-clip-text text-white leading-none my-20 text-[40px] lg:text-[90px] font-[600] text-center my-0 w-[60vw]"
+                    // className="headline massive text---white xxl-tab balanced line-height-100 home-hero-text"
+                    // style={{
+                    //   WebkitTextFillColor: "transparent",
+                    //   backgroundImage:
+                    //     "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55))",
+                    //   backgroundClip: "text",
+                    //   paddingBottom: "0.05em",
+                    //   fontSize: "7rem",
+                    //   lineHeight: "100%",
+                    //   textAlign: "center",
+                    // }}
                   >
                     Custom ChatGPT for your website
                   </h1>{" "}
                 </div>
-              </div>
-              <div className="elementor-element elementor-element-68c6a3b elementor-widget elementor-widget-text-editor">
+              </div> */}
+              {/* <div className="elementor-element elementor-element-68c6a3b elementor-widget elementor-widget-text-editor">
                 <div className="elementor-widget-container">
                   <p
                     className="container---small text---white center"
@@ -59,13 +90,14 @@ export default function IndexPage() {
                     </span>
                   </p>{" "}
                 </div>
-              </div>
-              <div className="elementor-element elementor-element-eb0e9d8 elementor-align-center elementor-widget elementor-widget-button">
+              </div> */}
+              {/* <div className="elementor-element elementor-element-eb0e9d8 elementor-align-center elementor-widget elementor-widget-button">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
                     <Link
                       className="elementor-button elementor-button-link elementor-size-sm"
-                      href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
+                      passHref
+                      href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL + "/login"}
                     >
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">
@@ -75,10 +107,10 @@ export default function IndexPage() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <section className="elementor-section elementor-inner-section elementor-element elementor-element-f48d0bb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
                 <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6793e5d">
+                  <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6793e5d !hidden sm:!block">
                     <div className="elementor-widget-wrap elementor-element-populated">
                       <div className="elementor-element elementor-element-3f4e84a elementor-widget elementor-widget-image">
                         <div className="elementor-widget-container">
@@ -113,7 +145,7 @@ export default function IndexPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-716401a">
+                  <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-716401a !hidden sm:!block">
                     <div className="elementor-widget-wrap elementor-element-populated">
                       <div className="elementor-element elementor-element-cfa067c elementor-widget elementor-widget-image">
                         <div className="elementor-widget-container">
@@ -133,6 +165,9 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
+      </section>
+      <section id="product-tab">
+      <SpeedTabs />
       </section>
       <section className="elementor-section elementor-top-section elementor-element elementor-element-ee5124a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
         <div className="elementor-container elementor-column-gap-default">
@@ -1434,7 +1469,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-73af5bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
+      <section className="elementor-section elementor-top-section elementor-element elementor-element-73af5bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container !px-[20px] lg:!px-[50px]">
         <div className="o-container-xl">
           <div className="u-maxw-8 u-mx-auto u-text-center u-Pb-md lg:u-Pb-xl">
             <h2
@@ -1472,7 +1507,8 @@ export default function IndexPage() {
                     and emails to train your model
                   </p>
                   <Link
-                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
+                    passHref
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL + "/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Scan your website
@@ -1491,12 +1527,13 @@ export default function IndexPage() {
                     Customize chatbot
                   </p>
                   <p className="u-text-p6 u-Pb-xs">
-                    Make your chatbot look like it&apos;s part of your website with
-                    custom colors and logos and make it match your brand&apos;s
-                    personality with custom instructions
+                    Make your chatbot look like it&apos;s part of your website
+                    with custom colors and logos and make it match your
+                    brand&apos;s personality with custom instructions
                   </p>
                   <Link
-                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
+                    passHref
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL + "/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Build your chatbot
@@ -1520,7 +1557,8 @@ export default function IndexPage() {
                     chat widget or an iframe section
                   </p>
                   <Link
-                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL+"/login"}
+                    passHref
+                    href={process.env.NEXT_PUBLIC_SUB_DOMAIN_URL + "/login"}
                     className="c-link u-text-p6 u-text-weight-medium"
                   >
                     Embed Chatbot{" "}
@@ -1532,26 +1570,371 @@ export default function IndexPage() {
         </div>
       </section>
 
+      <section className="w-full h-full flex flex-col items-center justify-center my-12">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-muted text-[40px] lg:text-[70px] w-[90vw] lg:w-[60vw] text-center font-bold leading-tight">
+            Truly unlimited no-code tool with features that matter
+          </h1>
+          <br />
+          <h4 className="w-[90vw] lg:w-[50vw] text-[gray] text-center">
+            We’re not just focused on building features - we’re focused on
+            removing the barriers so you can do whatever you want, however you
+            want. If it can be coded, it can be built in Divhunt.
+          </h4>
+        </div>
+        <br />
+        <br />
+        <BentoGridFinal />
+      </section>
       <section
+        style={{ paddingTop: 40 }}
+        className="elementor-element elementor-element-c350d63"
         id="features"
-        className="elementor-section elementor-top-section elementor-element elementor-element-fbb5baa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container"
       >
-        <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e5bf0b4">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-baf9b30 elementor-widget elementor-widget-text-editor">
-                <div className="elementor-widget-container">
-                  <p>
-                    <strong>
-                      <span style={{ color: "#ef61ff" }}>
-                        POWERFUL FEATURES{" "}
+        <div className="elementor-section elementor-top-section elementor-element elementor-element-fbb5baa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container py-5">
+          <div className="elementor-container elementor-column-gap-default">
+            <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e5bf0b4">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-baf9b30 elementor-widget elementor-widget-text-editor">
+                  <div className="elementor-widget-container">
+                    <p>
+                      <strong>
+                        <span style={{ color: "#ef61ff" }}>
+                          POWERFUL FEATURES{" "}
+                        </span>
+                      </strong>
+                      <br />
+                      <span style={{ color: "#ebebeb" }}>
+                        Everything you need for your no-code AI chatbot.
                       </span>
-                    </strong>
-                    <br />
-                    <span style={{ color: "#ebebeb" }}>
-                      Everything you need for your no-code AI chatbot.
-                    </span>
-                  </p>{" "}
+                    </p>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="elementor-section elementor-top-section elementor-element elementor-element-73af5bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
+          <div className="elementor-container elementor-column-gap-default">
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-876a645">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-86ba68e ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              Lead Generation Engine{" "}
+                            </h3>
+                            <p>
+                              Collect leads and gather your customers data, all
+                              while providing a personalized experience.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-96479db">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-c757d4c ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              80+ Languages{" "}
+                            </h3>
+                            <p>
+                              Reach your customers in their native language even
+                              if your data is in a different language.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-39124ef">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-0fdc08c ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              Support Tickets{" "}
+                            </h3>
+                            <p>
+                              User can enter request to contact support team,
+                              the bot collects their contact details, creates a
+                              support ticket and notifies you.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="elementor-section elementor-top-section elementor-element elementor-element-c350d63 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
+          <div className="elementor-container elementor-column-gap-default">
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-127712f">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-641db36 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              Customization{" "}
+                            </h3>
+                            <p>
+                              Customize your chatbots look and feel to match
+                              your brand style and website design.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e9d7b93">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-4a98258 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              Privacy &amp; Security{" "}
+                            </h3>
+                            <p>
+                              Your data is hosted on secure servers with robust
+                              encryption and access control. Remove Chatpad
+                              branding
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a982c21">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-541b676 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
+                  <div className="elementor-widget-container">
+                    <div className="ekit-wid-con">
+                      {" "}
+                      {/* link opening */}
+                      <a href="#" className="ekit_global_links">
+                        {/* end link opening */}
+                        <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
+                          <div className="elementskit-box-header elementor-animation-">
+                            <div className="elementskit-info-box-icon  ">
+                              <svg
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                                width={30}
+                                className="text-zinc-900"
+                                height={30}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M6 6h.008v.008H6V6z"
+                                  stroke="#18181B"
+                                  fill="none"
+                                  strokeWidth="1.5px"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="box-body">
+                            <h3 className="elementskit-info-box-title">
+                              File Attachments{" "}
+                            </h3>
+                            <p>
+                              You can attach a file CSV, XML, Images etc... in
+                              the chat and the chatbot will analyse it.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>{" "}
+                  </div>
                 </div>
               </div>
             </div>
@@ -1559,331 +1942,6 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-73af5bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
-        <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-876a645">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-86ba68e ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Lead Generation Engine{" "}
-                          </h3>
-                          <p>
-                            Collect leads and gather your customers data, all
-                            while providing a personalized experience.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-96479db">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-c757d4c ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            80+ Languages{" "}
-                          </h3>
-                          <p>
-                            Reach your customers in their native language even
-                            if your data is in a different language.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-39124ef">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-0fdc08c ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Support Tickets{" "}
-                          </h3>
-                          <p>
-                            User can enter request to contact support team, the
-                            bot collects their contact details, creates a
-                            support ticket and notifies you.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-c350d63 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementskit-parallax-multi-container">
-        <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-127712f">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-641db36 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Customization{" "}
-                          </h3>
-                          <p>
-                            Customize your chatbots look and feel to match your
-                            brand style and website design.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e9d7b93">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-4a98258 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Privacy &amp; Security{" "}
-                          </h3>
-                          <p>
-                            Your data is hosted on secure servers with robust
-                            encryption and access control. Remove Chatpad
-                            branding
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a982c21">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-541b676 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box">
-                <div className="elementor-widget-container">
-                  <div className="ekit-wid-con">
-                    {" "}
-                    {/* link opening */}
-                    <a href="#" className="ekit_global_links">
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-center text-center icon-top-align elementor-animation-   ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  ">
-                            <svg
-                              xmlnsXlink="http://www.w3.org/1999/xlink"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                              width={30}
-                              className="text-zinc-900"
-                              height={30}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M6 6h.008v.008H6V6z"
-                                stroke="#18181B"
-                                fill="none"
-                                strokeWidth="1.5px"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            File Attachments{" "}
-                          </h3>
-                          <p>
-                            You can attach a file CSV, XML, Images etc... in the
-                            chat and the chatbot will analyse it.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section
         id="low-code"
         className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 py-12 md:py-24 lg:py-32"
@@ -2558,44 +2616,39 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section
-        style={{ backgroundColor: "rgb(9 11 22/1)" }}
-        className="flex relative overflow-hidden [&>*:not(.data-rf-layer)]:z-10 flex-row h-[600px] sm:h-[480px] mask-gradient-circle from-landing-950"
-      >
-        <div className="flex absolute data-rf-layer rounded-[inherit] flex-row aspect-[1] bg-gradient-to-r from-[#CB5CDD] to-[#276BF0] rounded-b-full bottom-[50%] left-[30%] right-[30%] blur-[100px]" />
-        <div className="flex absolute data-rf-layer rounded-[inherit] flex-row aspect-[10/7] -left-1/2 -right-1/2 bottom-[70%] bg-landing-950 !rounded-[50%] border-b border-b-landing-50/30" />
-        <div className="flex flex-col absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-12 items-center gap-6">
-          <Image
-            style={{ width: 60 }}
-            src="https://mekoy17nau9fhmpf.public.blob.vercel-storage.com/favicon_chatpad_large.png"
-            width={60}
-            height={60}
-            alt="logo"
-          />
-          <div className="flex flex-col gap-4 items-center text-center">
-            <span className="text-3xl font-semibold text-[#EBECF3]">
-              Get Custom ChatGPT On Your Website
-            </span>
-            <span className="leading-7 text text-[#EBECF3]">
-              Build your own AI powered chatbot. No coding required.
-            </span>
-            <div className="flex flex-row gap-4 wrap justify-center">
-              <button
-                style={{
-                  backgroundColor: "#1e293b",
-                  borderStyle: "solid",
-                  borderWidth: "1px 1px 1px 1px",
-                  borderColor: "#3d4355",
-                  borderRadius: "25px 25px 25px 25px",
-                }}
-                className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-primary-50 text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4 min-w-[100px] rounded-full"
-              >
-                Get Started for Free
-              </button>
-            </div>
+      <section id="horizon-section" className={Styles.t2242}>
+        <div className={Styles.t2243}>
+          <div className={Styles.t2244}>
+            <div className={Styles.t2245}></div>
+            <div className={Styles.t2246}></div>
+          </div>
+          <div className={Styles.t2250}></div>
+          <div id="horizon-div" className={Styles.t2247}>
+            <div className={Styles.t2249}></div>
+            <div className={Styles.t2248}></div>
           </div>
         </div>
       </section>
+      <center>
+        <section className="mt-[300px] md:mt-[400px]">
+          <div className="heading flex flex-col gap-10 md:gap-0 md:flex-row w-[auto] md:w-[70vw] m-[10px] p-[10px] md:m-[100px] relative z-[100]">
+            <div className="flex flex-col w-[100%] md:w-[50%] gap-10">
+              <h1 className="text-center md:text-start text-5xl font-[600] text-muted color-[white]">
+                Everything you need to get started
+              </h1>
+              <p className="text-center md:text-start text-[gray]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Asperiores inventore, minus blanditiis eum aut tempore iure ex
+                beatae voluptate voluptatibus. Et hic molestiae excepturi
+                distinctio. Recusandae saepe maxime illum cumque?
+              </p>
+            </div>
+            <div className="flex flex-col justify-end items-center md:items-end w-[100%] md:w-[50%]">
+              <PrimaryButton url="#" text="Get Started Free"></PrimaryButton>
+            </div>
+          </div>
+        </section>
+      </center>
     </>
   );
 }

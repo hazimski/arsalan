@@ -73,9 +73,9 @@
     @apply text-muted-dark;
   }
 
-  a:hover {
+  /* a:hover {
     @apply text-muted-foreground;
-  }
+  } */
 
   body {
     @apply bg-background text-foreground;
