@@ -7,22 +7,37 @@ const nextConfig = {
     domains: ['mekoy17nau9fhmpf.public.blob.vercel-storage.com','www.chatbot.com','btrendy.co'],
   },
   swcMinify: true,
-  rewrites() {
-    return {
-      afterFiles: [
-            {
-                source: '/:path((?!^$).*)',
-                has: [
-                    {
-                        type: 'host',
-                        value: 'www.chatpad.co',
-                    }
-                ],
-                destination: 'https://app.chatpad.co/:path*',
-            },
-        ]
-    }
-  }
+  async redirects() {
+    return [
+      {
+        source: '/:path((?!^$).*)', // Match any path that is not empty
+        has: [
+          {
+            type: 'host',
+            value: 'www.chatpad.co',
+          },
+        ],
+        destination: 'https://app.chatpad.co/:path*', // Redirect to app.chatpad.co
+        permanent: true, // Set to true if it's a permanent redirect
+      },
+    ];
+  },
+  // rewrites() {
+  //   return {
+  //     afterFiles: [
+  //           {
+  //               source: '/:path((?!^$).*)',
+  //               has: [
+  //                   {
+  //                       type: 'host',
+  //                       value: 'www.chatpad.co',
+  //                   }
+  //               ],
+  //               destination: 'https://app.chatpad.co/:path*',
+  //           },
+  //       ]
+  //   }
+  // }
 };
 
 export default nextConfig;
