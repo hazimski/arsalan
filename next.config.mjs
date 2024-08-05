@@ -22,13 +22,26 @@ const nextConfig = {
         // Condition to exclude root path
         missing: [
           {
-            type: 'query',
-            key: '',
+            type: 'header',
+            key: 'x-do-not-redirect',
           },
         ],
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'x-do-not-redirect',
+            value: 'true',
+          },
+        ],
+      },
+    ];
+  }
   // rewrites() {
   //   return {
   //     afterFiles: [
