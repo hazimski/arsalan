@@ -7,6 +7,22 @@ const nextConfig = {
     domains: ['mekoy17nau9fhmpf.public.blob.vercel-storage.com','www.chatbot.com','btrendy.co'],
   },
   swcMinify: true,
+  rewrites() {
+    return {
+      beforeFiles: [
+            {
+                source: '/embed/:path*',
+                has: [
+                    {
+                        type: 'host',
+                        value: 'www.chatpad.co',
+                    }
+                ],
+                destination: 'https://app.chatpad.co/embed/:path*',
+            },
+        ]
+    }
+  }
 };
 
 export default nextConfig;
