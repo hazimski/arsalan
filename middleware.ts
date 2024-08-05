@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  const excludedPaths = ["/favicon.ico", "/_next/", "/static/"];
+  const excludedPaths = ["/favicon.ico", "/_next/", "/static/", "/embed"];
   const isExcluded = excludedPaths.some((path) => pathname.startsWith(path));
   // Check if the request is for the root page
   if (isExcluded || pathname === "/") {
